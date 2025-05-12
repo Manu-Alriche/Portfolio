@@ -170,30 +170,107 @@ nav .right a span {
   margin-bottom: 20px;
 }
 
-.projects-section .group {
+.container {
+  width: 80%;
+  height: 630px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.bloc {
+  height: 70px;
+  margin: 5px;
+  border-radius: 25px;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(189, 189, 189, 0.1) 0px,
+      rgba(189, 189, 189, 0.1) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+  flex-grow: 1;
+  transition: flex-grow 0.4s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.active {
+  flex-grow: 10000;
+}
+
+.bloc * {
+  pointer-events: none;
+}
+
+.bloc-haut {
+  height: 70px;
   display: flex;
   align-items: center;
-  gap: 50px;
 }
 
-.projects-section .group .project {
-  flex: 2;
-  width: 100%;
+.bloc .ligne {
+  width: 70%;
+  height: 1px;
+  border-radius: 2px;
+  background: var(--text-color);
+  margin: 0 5px 0 auto;
 }
 
-.projects-section .group .project img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.titre-section {
+  margin: 0 25px;
+  font-size: 30px;
+}
+
+.number {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  margin: 0 18px 0 10px;
+  font-weight: bold;
+}
+
+.contenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenu img {
+  width: 30%;
+  margin-right: 65px;
+  margin-left: 50px;
+}
+
+.contenu p {
+  width: 350px;
+}
+
+.infos {
+  font-family: "Poppins", sans-serif;
+}
+
+.infos h2 {
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.infos p {
+  line-height: 140%;
+}
+
+.infos button {
+  background: transparent;
+  border: 2px solid var(--link-color);
+  padding: 10px 10px;
+  margin-top: 10px;
   border-radius: 5px;
+  font-size: 17px;
+  pointer-events: auto !important;
 }
 
-.projects-section .group h3 {
-  text-align: center;
-}
-
-.projects-section .group p {
-  text-align: center;
+.infos button:active {
+  transform: scale(0.95);
 }
 
 /* SECTION 4: Temoignage */
@@ -300,6 +377,71 @@ footer {
   .hero-section .text h2 {
     font-size: 35px;
   }
+
+  /* SECTION 3: Projets */
+  .container {
+    width: 80%;
+    height: auto;
+    margin: 30px auto;
+  }
+
+  .bloc {
+    height: auto;
+    flex-grow: unset !important; /* Désactive l'animation */
+    flex-direction: column;
+  }
+
+  .bloc-haut {
+    /* flex-direction: column; */
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 30px;
+  }
+
+  .bloc .ligne {
+    display: none;
+  }
+
+  .titre-section {
+    font-size: 22px;
+    margin: 0;
+  }
+
+  .number {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+
+  .contenu {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .contenu img {
+    width: 75%;
+    margin: 0 0 15px 0;
+  }
+
+  .contenu p {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .infos h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .infos p {
+    font-size: 14px;
+  }
+
+  .infos button {
+    width: 100%;
+    font-size: 16px;
+    border-radius: 1rem;
+  }
 }
 
 @media (max-width: 740px) {
@@ -329,11 +471,6 @@ footer {
 
   .hero-section .headshot img {
     width: 300px;
-  }
-
-  /* SECTION 3: Projets */
-  .projects-section .group {
-    flex-direction: column;
   }
 
   /* SECTION 4: Temoignage */
@@ -370,11 +507,6 @@ footer {
     font-size: 16px;
   }
 
-  /* SECTION 3: Projets */
-  .projects-section .group {
-    flex-direction: column;
-  }
-
   /* SECTION 4: Temoignage */
   .temoignage-section {
     padding: 0 20px;
@@ -400,6 +532,107 @@ footer {
 .dark-mode .hero-section .links a:hover {
   color: var(--background-color);
   border: 2px solid var(--background-color);
+}
+
+.dark-mode .container {
+  width: 80%;
+  height: auto;
+  margin: 30px auto;
+}
+
+.dark-mode .bloc {
+  height: 70px;
+  margin: 5px;
+  border-radius: 25px;
+  background-image: repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0px,
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(90deg, rgb(189, 189, 189), rgb(189, 189, 189));
+  flex-grow: 1;
+  transition: flex-grow 0.4s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.dark-mode .active {
+  flex-grow: 10000;
+}
+
+.dark-mode .bloc * {
+  pointer-events: none;
+}
+
+.dark-mode .bloc-haut {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.dark-mode .bloc .ligne {
+  width: 70%;
+  height: 1px;
+  border-radius: 2px;
+  background: var(--background-color);
+  margin: 0 5px 0 auto;
+}
+
+.dark-mode .titre-section {
+  margin: 0 25px;
+  font-size: 30px;
+}
+
+.dark-mode .number {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  margin: 0 18px 0 10px;
+  font-weight: bold;
+}
+
+.dark-mode .contenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-mode .contenu img {
+  width: 30%;
+  margin-right: 65px;
+  margin-left: 50px;
+}
+
+.dark-mode .contenu p {
+  width: 350px;
+}
+
+.dark-mode .infos {
+  font-family: "Poppins", sans-serif;
+}
+
+.dark-mode .infos h2 {
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.dark-mode .infos p {
+  line-height: 140%;
+}
+
+.dark-mode .infos button {
+  background: transparent;
+  border: 2px solid var(--link-color);
+  padding: 10px 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-size: 17px;
+  pointer-events: auto !important;
+}
+
+.dark-mode .infos button:active {
+  transform: scale(0.95);
 }
 
 #toggle-theme {

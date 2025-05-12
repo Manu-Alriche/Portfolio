@@ -1,6 +1,4 @@
 // Titre h1
-// Ce gestionnaire ne sera exécuté qu'une fois
-// lorsque le curseur se déplace sur la liste
 const h1 = document.querySelector(".left");
 
 h1.addEventListener(
@@ -35,4 +33,47 @@ toggleButton.addEventListener("click", () => {
   } else {
     localStorage.setItem("theme", "light");
   }
+});
+
+// Section 3 : projets
+const allBlocs = document.querySelectorAll(".bloc");
+
+allBlocs.forEach((bloc) => {
+  bloc.addEventListener("click", (e) => {
+    // console.log(e.target);
+    e.target.classList.add("active");
+
+    for (let i = 0; i < allBlocs.length; i++) {
+      if (allBlocs[i] !== e.target) {
+        allBlocs[i].classList.remove("active");
+      }
+    }
+  });
+});
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+});
+
+// Envoi du formulaire
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contact-form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_16r6rn9", "contact_template", form)
+      .then(() => {
+        alert("Message envoyé avec succès !");
+        form.reset();
+      })
+      .catch((error) => {
+        alert("Erreur lors de l'envoi : " + error.text);
+      });
+  });
 });
