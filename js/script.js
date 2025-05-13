@@ -14,27 +14,6 @@ h1.addEventListener(
   false
 );
 
-// Dark-mode
-const toggleButton = document.getElementById("toggle-theme");
-const body = document.body;
-
-// Vérifier si un mode est déjà enregistré dans localStorage
-if (localStorage.getItem("theme") === "dark") {
-  body.classList.add("dark-mode");
-}
-
-// Basculer le mode
-toggleButton.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
-
-  // Enregistrer le choix dans localStorage
-  if (body.classList.contains("dark-mode")) {
-    localStorage.setItem("theme", "dark");
-  } else {
-    localStorage.setItem("theme", "light");
-  }
-});
-
 // Section 3 : projets
 const allBlocs = document.querySelectorAll(".bloc");
 
@@ -57,6 +36,27 @@ buttons.forEach((btn) => {
   btn.addEventListener("click", (e) => {
     e.stopPropagation();
   });
+});
+
+// Dark-mode
+const toggleButton = document.getElementById("toggle-theme");
+const body = document.body;
+
+// Vérifier si un mode est déjà enregistré dans localStorage
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+}
+
+// Basculer le mode
+toggleButton.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  // Enregistrer le choix dans localStorage
+  if (body.classList.contains("dark-mode")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
 });
 
 // Envoi du formulaire

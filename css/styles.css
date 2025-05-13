@@ -1,6 +1,6 @@
 :root {
   --text-color: #1a1c20;
-  --link-color: #4a76ee;
+  --link-color: #799cfc;
   --background-color: #eeeff1;
 }
 
@@ -534,14 +534,18 @@ footer {
   border: 2px solid var(--background-color);
 }
 
+/* Section 3 : projets */
 .dark-mode .container {
   width: 80%;
-  height: auto;
   margin: 30px auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .dark-mode .bloc {
-  height: 70px;
+  overflow: hidden;
+  max-height: 70px; /* hauteur fermée */
+  transition: max-height 0.6s ease;
   margin: 5px;
   border-radius: 25px;
   background-image: repeating-linear-gradient(
@@ -552,14 +556,11 @@ footer {
       transparent 4px
     ),
     linear-gradient(90deg, rgb(189, 189, 189), rgb(189, 189, 189));
-  flex-grow: 1;
-  transition: flex-grow 0.4s ease-out;
   position: relative;
-  overflow: hidden;
 }
 
-.dark-mode .active {
-  flex-grow: 10000;
+.dark-mode .bloc.active {
+  max-height: 1000px; /* assez grand pour contenir le contenu */
 }
 
 .dark-mode .bloc * {
