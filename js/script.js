@@ -4,7 +4,7 @@ const h1 = document.querySelector(".left");
 h1.addEventListener(
   "mouseover",
   (event) => {
-    event.target.textContent = "Développeur Web Frontend";
+    event.target.textContent = "Développeur Web Fullstack";
 
     // on réinitialise le titre après quelques instants
     setTimeout(function () {

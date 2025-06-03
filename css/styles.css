@@ -273,6 +273,11 @@ nav .right a span {
   transform: scale(0.95);
 }
 
+.infos button:hover {
+  background-color: var(--link-color);
+  color: #fff;
+}
+
 /* SECTION 4: Temoignage */
 .temoignage-section {
   padding: 0 50px;
