@@ -39,27 +39,6 @@ JavaScript Vanilla – Interactions dynamiques (formulaire, animations)
 └── README.md
 ```
 
-## 🔧 Installation
-
-- Clone le repo :
-```
-git clone https://github.com/ton-utilisateur/portfolio.git
-```
-
-- Ouvre le fichier index.html dans ton navigateur préféré :
-```
-cd portfolio
-open index.html
-```
-Ou utilise une extension de serveur local (ex : Live Server sous VSCode).
-
-## ✨ Personnalisation
-- Modifier le contenu : mets à jour le fichier index.html avec tes propres informations (nom, bio, projets…).
-
-- Adapter le style : édite css/style.css pour changer les couleurs, polices ou mise en page.
-
-- Ajouter des projets : duplique une carte de projet dans le HTML et mets à jour les infos.
-
 ## ✅ À venir (idées d’amélioration)
 - Dark mode
 
