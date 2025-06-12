@@ -1,6 +1,6 @@
 # Portfolio
 
-Ce projet est un portfolio personnel développé avec les technologies HTML, CSS et JavaScript. 
+Ce projet est un portfolio personnel développé avec les technologies HTML, CSS et JavaScript.
 
 Il présente mes projets, compétences et expériences professionnelles, ainsi qu'une section de contact.
 
@@ -27,6 +27,7 @@ CSS3 – Mise en page et styles (Flexbox, Grid)
 JavaScript Vanilla – Interactions dynamiques (formulaire, animations)
 
 ## 📁 Structure des fichiers
+
 ```
 /
 ├── index.html
@@ -40,6 +41,7 @@ JavaScript Vanilla – Interactions dynamiques (formulaire, animations)
 ```
 
 ## ✅ À venir (idées d’amélioration)
+
 - Dark mode
 
 - Intégration d’un backend pour le formulaire (PHP, Node.js…)
@@ -47,3 +49,7 @@ JavaScript Vanilla – Interactions dynamiques (formulaire, animations)
 - Animation plus poussée (GSAP)
 
 - Multilingue (fr/en)
+
+## Résultat final
+
+![portfolio](./images/Portfolio.png)
