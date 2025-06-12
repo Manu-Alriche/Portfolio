@@ -47,3 +47,7 @@ JavaScript Vanilla – Interactions dynamiques (formulaire, animations)
 - Animation plus poussée (GSAP)
 
 - Multilingue (fr/en)
+
+## Résultat final
+
+![portfolio](./images/Portfolio.png)
